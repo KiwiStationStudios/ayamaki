@@ -5,6 +5,9 @@ namespace Ayamaki.Core.Interaction
     public class InteractionManager : MonoBehaviour
     {
         public static InteractionManager Instance;
+        [SerializeField] private TriggerArea[] areas;
+
+
         void Awake()
         {
             if (Instance == null)
@@ -16,7 +19,13 @@ namespace Ayamaki.Core.Interaction
         // Update is called once per frame
         void Update()
         {
-        
+
         }
+    }
+
+    class TriggerArea
+    {
+        public string name = "";
+        public bool destroyOnTrigger = true;
     }
 }
