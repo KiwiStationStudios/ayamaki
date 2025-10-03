@@ -14,6 +14,16 @@ namespace Ayamaki.Core
             LOCAL
         }
 
+        public static GameManager Instance;
+
+        void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(this);
+        }
+
         [SerializeField] internal ValueField[] sharedValues;
         [SerializeField] internal ValueField[] sceneValues;
 
@@ -23,6 +33,17 @@ namespace Ayamaki.Core
         void Start()
         {
             // force a re-index on the dictionaries //
+            SyncronizeDictionary();
+            SceneManager.sceneUnloaded += OnSceneLeave;
+        }
+
+        void OnValidade()
+        {
+            SyncronizeDictionary();
+        }
+
+        void SyncronizeDictionary()
+        {
             localValues.Clear();
             globalvalues.Clear();
 
@@ -36,8 +57,6 @@ namespace Ayamaki.Core
 
                 localValues.Add(item.name, item.value);
             }
-
-            SceneManager.sceneUnloaded += OnSceneLeave;
         }
 
         private string GetValue(StorageHolder store, string key)

@@ -1,0 +1,16 @@
+{
+    "name": "Ayamaki.Game.Events",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

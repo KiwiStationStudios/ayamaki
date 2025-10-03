@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "gemidao.sln"
+    "dotnet.defaultSolution": "ayamaki.sln",
+    "git.ignoreLimitWarning": true
 }

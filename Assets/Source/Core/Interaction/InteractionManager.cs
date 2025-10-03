@@ -1,31 +1,27 @@
+
 using UnityEngine;
 
 namespace Ayamaki.Core.Interaction
 {
     public class InteractionManager : MonoBehaviour
     {
-        public static InteractionManager Instance;
-        [SerializeField] private TriggerArea[] areas;
-
-
+        public static InteractionManager instance;
+        [SerializeField] private Interactable[] currentInteractable;
         void Awake()
         {
-            if (Instance == null)
-                Instance = this;
-            else
+            if (instance != null)
+            {
                 Destroy(this);
+                return;
+            }
+
+            instance = this;
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            
         }
-    }
-
-    class TriggerArea
-    {
-        public string name = "";
-        public bool destroyOnTrigger = true;
     }
 }
