@@ -1,8 +1,9 @@
 {
-    "name": "PlayerAssembly",
+    "name": "Ayamaki.Game.Events.Actions",
     "rootNamespace": "",
     "references": [
-        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245"
+        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245",
+        "GUID:ebda93a95de6fa8469ccd2ea515e81e1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

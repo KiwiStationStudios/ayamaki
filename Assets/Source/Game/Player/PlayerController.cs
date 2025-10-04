@@ -1,4 +1,3 @@
-using Ayamaki.Game.Collectable;
 using UnityEngine;
 
 namespace Ayamaki.Game.Player
@@ -61,14 +60,6 @@ namespace Ayamaki.Game.Player
             velocity.y = _yVelocity;
 
             charController.Move(velocity * Time.deltaTime);
-        }
-
-        void OnTriggerStay(Collider collider)
-        {
-            if (collider.CompareTag("Collectable"))
-                if (Input.GetKey(KeyCode.E))
-                    if (collider.TryGetComponent(out ICollectable collectable))
-                        collectable.Collect();
         }
 
         void OnDrawGizmos()
