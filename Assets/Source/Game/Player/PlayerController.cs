@@ -14,9 +14,10 @@ namespace Ayamaki.Game.Player
         [SerializeField] private float mouseSensitivity = 100f;
         [SerializeField] private float minRotY = -80f;
         [SerializeField] private float maxRotY = 80f;
-        [SerializeField]private float gravity = 9.8f;
-        [SerializeField]private float playerSpeed = 5f;
-        [SerializeField]private float jumpHeight = 5f;
+        [SerializeField] private float gravity = 9.8f;
+        [SerializeField] private float playerSpeed = 5f;
+        [SerializeField] private float jumpHeight = 5f;
+        public bool isMoving = false;
         private float xRotation = 0f; // câmera olhar pra cima/baixo
         private float yRotation = 0f; // player girar pro lado
         private float _yVelocity = 0f;
@@ -33,6 +34,7 @@ namespace Ayamaki.Game.Player
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
             Vector3 movePlayer = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+            isMoving = movePlayer.magnitude > 0;
             Vector3 moveDirection = transform.TransformDirection(movePlayer);
 
             // Girar player no eixo Y (esquerda/direita)
