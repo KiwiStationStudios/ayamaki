@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3391018932445869838}
+  - component: {fileID: 2564255668626598778}
   m_Layer: 0
   m_Name: InteractableManager
   m_TagString: Untagged
@@ -31,6 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5474977000720773447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2564255668626598778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972455475825743406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5167fa390b30b29479571bd5c641de54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Ayamaki.Core.Interaction::InteractionManager
 --- !u!1 &2323781026421070393
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5474977000720773447}
-  - component: {fileID: 161956807150389761}
+  - component: {fileID: 4612188433670989112}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -65,18 +78,18 @@ Transform:
   - {fileID: 3391018932445869838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &161956807150389761
+--- !u!114 &4612188433670989112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2323781026421070393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f63125f1e79599142b2b5256fd282f1d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ayamaki.Core.GameManager
   sharedValues: []
   sceneValues: []
 --- !u!1001 &7829938055690403928

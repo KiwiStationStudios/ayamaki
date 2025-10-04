@@ -16,28 +16,24 @@ namespace Ayamaki.Core
 
         public static GameManager Instance;
 
-        void Awake()
-        {
-            if (Instance == null)
-                Instance = this;
-            else
-                Destroy(this);
-        }
-
         [SerializeField] internal ValueField[] sharedValues;
         [SerializeField] internal ValueField[] sceneValues;
 
         public Dictionary<string, string> globalvalues = new();
         public Dictionary<string, string> localValues = new();
 
-        void Start()
+        void Awake()
         {
-            // force a re-index on the dictionaries //
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(this);
+
             SyncronizeDictionary();
             SceneManager.sceneUnloaded += OnSceneLeave;
         }
 
-        void OnValidade()
+        void Oalidate()
         {
             SyncronizeDictionary();
         }

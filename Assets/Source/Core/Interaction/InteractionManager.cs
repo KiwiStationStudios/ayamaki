@@ -1,12 +1,12 @@
-
 using UnityEngine;
 
-namespace Ayamaki.Core.Interaction
+namespace Ayamaki.Core.Interactables
 {
     public class InteractionManager : MonoBehaviour
     {
         public static InteractionManager instance;
-        [SerializeField] private Interactable[] currentInteractable;
+
+        [SerializeField] private Interaction[] interactions;
         void Awake()
         {
             if (instance != null)
@@ -18,7 +18,11 @@ namespace Ayamaki.Core.Interaction
             instance = this;
         }
 
-        // Update is called once per frame
+        void Start()
+        {
+            
+        }
+
         void Update()
         {
             
