@@ -2,7 +2,8 @@
     "name": "PlayerAssembly",
     "rootNamespace": "",
     "references": [
-        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245"
+        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245",
+        "GUID:8884388ffc4341841992e7c0174d4183"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
