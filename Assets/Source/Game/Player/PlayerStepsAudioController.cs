@@ -55,6 +55,10 @@ public class PlayerStepsAudioController : MonoBehaviour
 
     void Update()
     {
-        materialDict[matscan.currentMaterialName]?.PlayAudioVariation(audioSource);
+        if (materialDict[matscan.currentMaterialName] == null || matscan.currentMaterialName == "")
+            return;
+
+        
+        materialDict[matscan.currentMaterialName].PlayAudioVariation(audioSource);
     }
 }

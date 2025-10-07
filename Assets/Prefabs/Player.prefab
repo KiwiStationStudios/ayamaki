@@ -188,7 +188,7 @@ MonoBehaviour:
     FieldOfView: 100
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 500
+    FarClipPlane: 200
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -547,15 +547,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81ddddf4b29f769419adb2bad944b3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerAssembly::PlayerStepsAudioController
   audioSource: {fileID: 2600154357695298749}
   materials:
-  - name: grass
-    audioVariations: []
+  - name: grass_06
+    audioVariations:
+    - {fileID: 8300000, guid: 2500fe955d8dec8498c33b6c1383ca55, type: 3}
+    - {fileID: 8300000, guid: 79ceaa497bbe5ce448d41ba5482f3de3, type: 3}
 --- !u!114 &1819626682639952578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83d4c1d54ce3d564bb9748e2deb10559, type: 3}
   m_Name: 
