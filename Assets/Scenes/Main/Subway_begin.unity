@@ -947,15 +947,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892803493268516949, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 892803493268516949, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 892803493268516949, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: m_LocalScale.z
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 892803493268516949, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1003,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4748023831087803742, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: fogRadius
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4748023831087803742, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: fogColor.b
