@@ -5,9 +5,8 @@ using UnityEngine.UI;
 public class FadeController : MonoBehaviour
 {
     [SerializeField] private Image sprite;
-    [Tooltip("Wait how much time before triggering the event")]
-    [SerializeField] private float fadeTimer;
-    [SerializeField] private bool useTween = false;
+    [SerializeField, Tooltip("Wait how much time before triggering the event")] private float fadeTimer;
+    //[SerializeField] private bool useTween = false;
     public UnityEvent onFadeBegin;
     public UnityEvent onFadeEnd;
     void Start()
@@ -23,6 +22,6 @@ public class FadeController : MonoBehaviour
     
     public void StartFade()
     {
-        
+
     }
 }
