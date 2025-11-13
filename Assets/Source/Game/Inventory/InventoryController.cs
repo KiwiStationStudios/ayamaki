@@ -1,7 +1,7 @@
-using Ayamaki.Game.Collectable;
+using Ayamaki.Source.Shared.Collectable;
 using UnityEngine;
 
-namespace Ayamaki.Game.Inventory
+namespace Ayamaki.Source.Shared.Inventory
 {
     public class InventoryController : MonoBehaviour, ICollectable
     {

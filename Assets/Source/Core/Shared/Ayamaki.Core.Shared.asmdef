@@ -1,3 +1,4 @@
 {
-	"name": "Ayamaki.Core.Shared"
+    "name": "Ayamaki.Core.Shared",
+    "rootNamespace": "Ayamaki.Core.Shared"
 }

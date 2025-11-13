@@ -2,7 +2,7 @@ using Ayamaki.Core.Interactables;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ayamaki.Core.Player
+namespace Ayamaki.Source.Shared.Player
 {
     [RequireComponent(typeof(Collider))]
     public class PlayerInteractor : MonoBehaviour

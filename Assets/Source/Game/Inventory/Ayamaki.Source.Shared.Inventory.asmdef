@@ -1,9 +1,8 @@
 {
-    "name": "Ayamaki.Game.Events.Actions",
-    "rootNamespace": "",
+    "name": "Ayamaki.Source.Shared.Inventory",
+    "rootNamespace": "Ayamaki.Source.Shared.Inventory",
     "references": [
-        "GUID:9c9ad25ab1650a4459e0e84ecd4e2245",
-        "GUID:ebda93a95de6fa8469ccd2ea515e81e1"
+        "GUID:87efd4d47ceaecd43b1c6ccc7a91bbba"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Ayamaki.Game.Inventory
+namespace Ayamaki.Source.Shared.Inventory
 {
     public class InventoryManager : MonoBehaviour
     {

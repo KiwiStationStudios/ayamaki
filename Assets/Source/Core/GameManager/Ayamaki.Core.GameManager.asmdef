@@ -1,3 +1,14 @@
 {
-	"name": "Ayamaki.Core.GameManager"
+    "name": "Ayamaki.Core.GameManager",
+    "rootNamespace": "Ayamaki.Core.GameManager",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ayamaki.Game.Ambientance
+namespace Ayamaki.Source.Shared.Ambientance
 {
     [ExecuteInEditMode]
     [RequireComponent(typeof(Renderer))]

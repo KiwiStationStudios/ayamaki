@@ -275,7 +275,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Ayamaki.Game.GUI::FadeController
   sprite: {fileID: 0}
   fadeTimer: 0
-  useTween: 0
+  onFadeBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  onFadeEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8304892678215837531
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7872170168961376382
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 {
-    "name": "Collectable",
-    "rootNamespace": "",
+    "name": "Ayamaki.Source.Shared.Collectable",
+    "rootNamespace": "Ayamaki.Source.Shared.Collectable",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

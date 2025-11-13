@@ -1,4 +1,4 @@
-namespace Ayamaki.Game.Collectable
+namespace Ayamaki.Source.Shared.Collectable
 {
     public interface ICollectable
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ayamaki.Game.Collectable
+namespace Ayamaki.Source.Shared.Collectable
 {
     public class Item : MonoBehaviour, ICollectable
     {

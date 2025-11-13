@@ -7,7 +7,7 @@ using UnityEngine.Events;
 using UnityEditor;
 #endif
 
-namespace Ayamaki.Game.GUI
+namespace Ayamaki.Source.Shared.GUI
 {
     [ExecuteAlways]
     public class TextController : MonoBehaviour

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Ayamaki.Core.Shared;
-using Ayamaki.Game.Player;
+using Ayamaki.Source.Shared.Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ayamaki.Game.Player
+namespace Ayamaki.Source.Shared.Player
 {
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour

@@ -1,6 +1,6 @@
 {
     "name": "Ayamaki.Core.Interactables",
-    "rootNamespace": "",
+    "rootNamespace": "Ayamaki.Core.Interactables",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

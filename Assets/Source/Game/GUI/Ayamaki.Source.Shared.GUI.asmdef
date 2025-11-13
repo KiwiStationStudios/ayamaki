@@ -1,8 +1,9 @@
 {
-    "name": "Inventory",
-    "rootNamespace": "",
+    "name": "Ayamaki.Source.Shared.GUI",
+    "rootNamespace": "Ayamaki.Source.Shared.GUI",
     "references": [
-        "GUID:87efd4d47ceaecd43b1c6ccc7a91bbba"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:e1fef6733ce43874582688ad044ef393"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

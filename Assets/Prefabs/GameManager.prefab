@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5474977000720773447}
   - component: {fileID: 4612188433670989112}
+  - component: {fileID: 4076935788218453696}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -92,6 +93,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ayamaki.Core.GameManager
   localValuesAsset: {fileID: 0}
+--- !u!114 &4076935788218453696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323781026421070393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002d21094a0327b4ba5258d6905f2e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Ayamaki.Core.GameManager::Ayamaki.Core.GameManager.SceneController
+  OnSceneBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLeave:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7829938055690403928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,6 +157,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160570163804348432, guid: cf6c5a5e97519634386f31c192da70e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142645139068169845, guid: cf6c5a5e97519634386f31c192da70e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142645139068169845, guid: cf6c5a5e97519634386f31c192da70e1, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693759058676488755, guid: cf6c5a5e97519634386f31c192da70e1, type: 3}

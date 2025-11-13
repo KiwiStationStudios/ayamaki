@@ -1,3 +1,4 @@
 {
-	"name": "Ayamaki.Core.View"
+    "name": "Ayamaki.Core.View",
+    "rootNamespace": "Ayamaki.Core.View"
 }
