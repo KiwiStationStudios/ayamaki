@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Ayamaki.Core.Interactables
@@ -27,7 +28,7 @@ namespace Ayamaki.Core.Interactables
 
         public void RegisterInteractable(Interactable interactable)
         {
-            if (System.Array.IndexOf(interactables, interactable) == -1)
+            if (Array.IndexOf(interactables, interactable) == -1)
             {
                 var newArray = new Interactable[interactables.Length + 1];
                 interactables.CopyTo(newArray, 0);
@@ -38,15 +39,15 @@ namespace Ayamaki.Core.Interactables
 
         public void UnregisterInteractable(Interactable interactable)
         {
-            int index = System.Array.IndexOf(interactables, interactable);
+            int index = Array.IndexOf(interactables, interactable);
             if (index >= 0)
             {
                 var newArray = new Interactable[interactables.Length - 1];
                 if (index > 0)
-                    System.Array.Copy(interactables, 0, newArray, 0, index);
+                    Array.Copy(interactables, 0, newArray, 0, index);
 
                 if (index < interactables.Length - 1)
-                    System.Array.Copy(interactables, index + 1, newArray, index, interactables.Length - index - 1);
+                    Array.Copy(interactables, index + 1, newArray, index, interactables.Length - index - 1);
 
                 interactables = newArray;
             }

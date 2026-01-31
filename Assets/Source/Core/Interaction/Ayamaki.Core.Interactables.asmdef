@@ -1,7 +1,10 @@
 {
     "name": "Ayamaki.Core.Interactables",
     "rootNamespace": "Ayamaki.Core.Interactables",
-    "references": [],
+    "references": [
+        "GUID:ebda93a95de6fa8469ccd2ea515e81e1",
+        "GUID:a3eac051004cc4c6b92cb1b018e08311"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

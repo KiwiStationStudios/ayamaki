@@ -1,52 +1,60 @@
-using Ayamaki.Core.GameManager;
+using Ayamaki.Core.GameAPI;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Ayamaki.Core.GameManager
 {
-    public static GameManager Instance { get; private set; }
-
-    [Header("Local Values (ScriptableObject original)")]
-    [SerializeField] private LocalValues localValuesAsset;
-
-    // Cópia em memória para esta cena
-    private LocalValues localValuesInstance;
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance != null && Instance != this)
+        public static GameManager Instance;
+
+        [Header("Local Values (ScriptableObject original)")]
+        [SerializeField] private LocalValues localValuesAsset;
+
+        // Cópia em memória para esta cena
+        private LocalValues localValuesInstance;
+
+        private void Awake()
         {
-            Destroy(gameObject);
-            return;
+            if (Instance == null)
+            {
+                Instance = this;
+                //
+                LuaAPI.StartAPI();
+                // Cria a cópia temporária
+                if (localValuesAsset != null)
+                {
+                    localValuesInstance = Instantiate(localValuesAsset);
+                    localValuesInstance.name = localValuesAsset.name + "_RuntimeCopy";
+                }
+                return;
+            }
+
+            Destroy(this);
         }
 
-        Instance = this;
+        public LocalValues localValues => localValuesInstance;
 
-        // Cria a cópia temporária
-        if (localValuesAsset != null)
+        // Métodos para facilitar acesso
+        public T GetLocal<T>(string key, T defaultValue = default)
         {
-            localValuesInstance = Instantiate(localValuesAsset);
-            localValuesInstance.name = localValuesAsset.name + "_RuntimeCopy";
+            return Instance != null ? localValuesInstance.Get(key, defaultValue) : defaultValue;
+        }
+            
+
+        public void SetLocal<T>(string key, T value)
+        {
+            if (localValuesInstance != null)
+                localValuesInstance.Set(key, value);
+        }
+
+        [ContextMenu("Print Local Values")]
+        private void PrintLocalValues()
+        {
+            foreach (var entry in localValues.dict)
+            {
+                Debug.Log($"{entry.Key} = {entry.Value}");
+            }
         }
     }
 
-    public LocalValues localValues => localValuesInstance;
-
-    // Métodos para facilitar acesso
-    public T GetLocal<T>(string key, T defaultValue = default) =>
-        localValuesInstance != null ? localValuesInstance.Get<T>(key, defaultValue) : defaultValue;
-
-    public void SetLocal<T>(string key, T value)
-    {
-        if (localValuesInstance != null)
-            localValuesInstance.Set<T>(key, value);
-    }
-
-    [ContextMenu("Print Local Values")]
-    private void PrintLocalValues()
-    {
-        foreach (var entry in localValues.dict)
-        {
-            Debug.Log($"{entry.Key} = {entry.Value}");
-        }
-    }
 }

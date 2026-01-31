@@ -1,4 +1,7 @@
 using System;
+using Ayamaki.Core.GameAPI;
+using Ayamaki.Core.GameManager;
+using Lua.Unity;
 using UnityEngine;
 
 namespace Ayamaki.Core.Interactables
@@ -6,13 +9,10 @@ namespace Ayamaki.Core.Interactables
     [Serializable]
     public class Interactable : MonoBehaviour
     {
-        [SerializeField] private ScriptableObject[] conditions; // Arrasta scripts que implementam ITriggerCondition
-        [SerializeField] private ScriptableObject[] actions;    // Arrasta scripts que implementam ITriggerAction
-
-        private ITriggerCondition[] _conditions;
-        private ITriggerAction[] _actions;
-
+        [SerializeField] private LuaAsset[] conditionScripts;
+        [SerializeField] private LuaAsset[] actionScripts; 
         [SerializeField] private bool destroyOnUse = true;
+
         [Header("DebugFields")]
         public bool isOnRange = true;
 
@@ -30,20 +30,25 @@ namespace Ayamaki.Core.Interactables
 
         void Awake()
         {
-            _conditions = Array.ConvertAll(conditions, c => (ITriggerCondition)c);
-            _actions = Array.ConvertAll(actions, a => (ITriggerAction)a);
+            //_conditions = Array.ConvertAll(conditions, c => (ITriggerCondition)c);
+            //_actions = Array.ConvertAll(actions, a => (ITriggerAction)a);
         }
 
         public void TryInteract(GameObject interactor)
         {
-            foreach (var condition in _conditions)
-                if (!condition.CheckCondition(interactor))
-                    return; // Alguma falhou, não executa
+            //foreach (var condition in conditions)
+                //if (!condition.CheckCondition(interactor))
+                    //return; // Alguma falhou, não executa
 
-            Debug.Log("Interactade");
+            Debug.Log("Interact");
 
-            foreach (var action in _actions)
-                action.Execute(interactor);
+            foreach (var script in actionScripts)
+            {
+
+            }
+
+            // Emite o callback Lua
+            LuaCallbackBus.Instance.Emit("onInteract", interactor, gameObject);
 
             if (destroyOnUse)
                 Destroy(gameObject);

@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 6974500388942786573}
   - component: {fileID: 7321665039777413005}
   - component: {fileID: 7427712828812795841}
+  - component: {fileID: 46321644714405680}
   m_Layer: 0
   m_Name: FogView
   m_TagString: Untagged
@@ -253,7 +254,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4693759058676488755}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -292,52 +293,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6059902564534379163
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2390156040957968799}
-  - component: {fileID: 5049845879794997106}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2390156040957968799
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6059902564534379163}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2160570163804348432}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5049845879794997106
+--- !u!114 &46321644714405680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6059902564534379163}
+  m_GameObject: {fileID: 4693759058676488755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f1a8744627924f458521b9ba94f0991, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f1d2cf2a55a6c44cb21511ad43bc6c8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  collectedObject: {fileID: 0}
+  m_EditorClassIdentifier: Ayamaki.Source.Shared.Ambientance::Ayamaki.Source.Shared.Ambientance.FogController
+  fogObject: {fileID: 4693759058676488755}
+  fogColor: {r: 0, g: 0, b: 0, a: 1}
+  fogRadius: 4
+  fogDensity: 11
 --- !u!1 &7307714355361194455
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,15 +320,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2160570163804348432}
-  - component: {fileID: 5888661022814237945}
-  - component: {fileID: 8153233447649012107}
   - component: {fileID: 7858557117591139691}
   - component: {fileID: 2346438293958763290}
   - component: {fileID: 5977060108268615640}
-  - component: {fileID: 9210963234831441410}
-  - component: {fileID: 3264504628740271366}
-  - component: {fileID: 7222606471646314242}
-  - component: {fileID: 1819626682639952578}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -378,66 +345,9 @@ Transform:
   m_Children:
   - {fileID: 3142645139068169845}
   - {fileID: 4672096801402215548}
-  - {fileID: 2390156040957968799}
   - {fileID: 6974500388942786573}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5888661022814237945
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8153233447649012107
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &7858557117591139691
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -510,71 +420,3 @@ MonoBehaviour:
   playerSpeed: 5
   jumpHeight: 5
   isMoving: 0
---- !u!114 &9210963234831441410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c7e9e186896824a8132b93ae0e7666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerAssembly::Ayamaki.Core.Player.PlayerInteractor
-  interactKey: 101
-  interactTrigger: {fileID: 0}
---- !u!114 &3264504628740271366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1d2cf2a55a6c44cb21511ad43bc6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogObject: {fileID: 4693759058676488755}
-  fogColor: {r: 0, g: 0, b: 0, a: 1}
-  fogRadius: 4
-  fogDensity: 11
---- !u!114 &7222606471646314242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ddddf4b29f769419adb2bad944b3d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerAssembly::PlayerStepsAudioController
-  audioSource: {fileID: 2600154357695298749}
-  materials:
-  - name: grass_06
-    audioVariations:
-    - {fileID: 8300000, guid: 2500fe955d8dec8498c33b6c1383ca55, type: 3}
-    - {fileID: 8300000, guid: 79ceaa497bbe5ce448d41ba5482f3de3, type: 3}
---- !u!114 &1819626682639952578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307714355361194455}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d4c1d54ce3d564bb9748e2deb10559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Ayamaki.Core.Shared::Ayamaki.Core.Shared.MaterialScanner
-  rayOrigin: {fileID: 2160570163804348432}
-  rayDistance: 4.29
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  debugRay: 1
-  currentMaterial: {fileID: 0}
-  currentMaterialName: 

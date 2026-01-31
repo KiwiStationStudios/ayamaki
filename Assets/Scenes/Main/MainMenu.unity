@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Ayamaki.Core.Interactables::Ayamaki.Core.Interactables.Interactable
   conditions:
-  - {fileID: 11400000, guid: 4d919bd715e5db344b58da9c055740e6, type: 2}
+  - {fileID: 0}
   actions: []
   destroyOnUse: 1
   isOnRange: 1
@@ -1237,6 +1237,34 @@ PrefabInstance:
       propertyPath: 'interactables.Array.data[0]'
       value: 
       objectReference: {fileID: 1133332965}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1574286200}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TestLuaTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Ayamaki.Core.GameAPI.LuaCore, Ayamaki.Core.GameAPI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076935788218453696, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+      propertyPath: OnSceneBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4612188433670989112, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1812,7 +1840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Ayamaki.Core.Interactables::Ayamaki.Core.Interactables.Interactable
   conditions: []
   actions:
-  - {fileID: 11400000, guid: 1b0579f6f9089f54ebb66a13077294a7, type: 2}
+  - {fileID: 0}
   destroyOnUse: 1
   isOnRange: 1
 --- !u!65 &1133332966
@@ -2431,6 +2459,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1574286200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6277899559677081904, guid: 1762da14a05bc9347afa00a6616e7c54, type: 3}
+  m_PrefabInstance: {fileID: 949472554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0f3aea5d3e2e64aa354aa5e4328fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Ayamaki.Core.GameAPI::Ayamaki.Core.GameAPI.LuaCore
 --- !u!1 &1673880647
 GameObject:
   m_ObjectHideFlags: 0
